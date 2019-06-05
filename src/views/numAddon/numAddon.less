@@ -1,0 +1,64 @@
+.page {}
+.component {
+  border: 1px solid #efeff3;
+  background: #ffffff;
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  .num-container {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      .num-dig {
+        position: relative;
+        & > div {
+          transition: all, 0.5s;
+          position: absolute;
+          top: 50%;
+        }
+        .last {
+          transform: translateY(-150%);
+        }
+        .current {
+          transform: translateY(-50%);
+        }
+        .next {
+          transform: translateY(50%);
+        }
+        .pend {
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+  .cover {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
+  .before {
+    top: 0;
+    background: -webkit-linear-gradient(#ffffff, transparent); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ffffff, transparent); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ffffff, transparent); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ffffff, transparent); /* 标准的语法 */
+  }
+  .after {
+    bottom: 0;
+    background: #ff3;
+    background: -webkit-linear-gradient(transparent, #ffffff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(transparent, #ffffff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(transparent, #ffffff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(transparent, #ffffff); /* 标准的语法 */
+  }
+}

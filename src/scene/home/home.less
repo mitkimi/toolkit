@@ -1,0 +1,22 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  overflow: hidden;
+  .menu {
+    width: 256px;
+    border-right: 1px solid #ebedf0;
+  }
+  .body {
+    width: calc(100% - 256px);
+    .bread-crumb {
+      padding: 15px; 
+    }
+    .border-container {
+      overflow: auto;
+      padding: 10px 15px;
+    }
+  }
+}
