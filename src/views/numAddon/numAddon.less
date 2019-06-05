@@ -1,4 +1,13 @@
 .page {}
+
+@-webkit-keyframes rolling_0 {
+  from {
+      transform:translate3d(0,-720px,0);
+  }
+  to {
+      transform:translate3d(0,0px,0);
+  }
+}
 .component {
   border: 1px solid #efeff3;
   background: #ffffff;
@@ -24,6 +33,9 @@
           transition: all, 0.5s;
           position: absolute;
           top: 50%;
+          transition: all, 0.5s;
+          animation: rolling_0 2.1s ease;
+          -webkit-animation: rolling_0 2.1s ease;
         }
         .last {
           transform: translateY(-150%);
